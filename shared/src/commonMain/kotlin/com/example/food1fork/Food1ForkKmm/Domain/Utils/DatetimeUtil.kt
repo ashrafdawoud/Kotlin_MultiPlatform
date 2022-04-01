@@ -1,12 +1,11 @@
 package com.example.food1fork.Food1ForkKmm.DataSource.Domain.Utils
 
 
-import kotlinx.datetime.*
-import kotlinx.datetime.TimeZone
+//import kotlinx.datetime.*
 
 class DatetimeUtil
 {
-    fun now(): LocalDateTime {
+   /* fun now(): LocalDateTime {
         val currentMoment: Instant = Clock.System.now()
         return currentMoment.toLocalDateTime(TimeZone.UTC)
     }
@@ -47,6 +46,6 @@ class DatetimeUtil
             }
         }?: sb.append("Unknown")
         return sb.toString()
-    }
+    }*/
 
 }

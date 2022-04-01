@@ -4,6 +4,10 @@ import com.example.food1fork.Food1ForkKmm.DataSource.Domain.Model.RecipeModel
 import com.example.food1fork.Food1ForkKmm.DataSource.Domain.Utils.DatetimeUtil
 import com.squareup.sqldelight.db.SqlDriver
 
+expect class DriverFactory {
+    fun createDriver(): SqlDriver
+}
+
 class RecipeDatabaseFactory(
     private val driverFactory: DriverFactory
 ){
@@ -12,9 +16,7 @@ class RecipeDatabaseFactory(
     }
 }
 
-expect class DriverFactory {
-    fun createDriver(): SqlDriver
-}
+
 fun Recipe_Entity.toRecipe(): RecipeModel {
     val datetimeUtil = DatetimeUtil()
     return RecipeModel(
@@ -25,8 +27,8 @@ fun Recipe_Entity.toRecipe(): RecipeModel {
         rating = rating.toInt(),
         sourceUrl = source_url,
         ingredients = ingredients.convertIngredientsToList(),
-        dateAdded = datetimeUtil.toLocalDate(date_added),
-        dateUpdated = datetimeUtil.toLocalDate(date_updated),
+        //dateAdded = datetimeUtil.toLocalDate(date_added),
+        //dateUpdated = datetimeUtil.toLocalDate(date_updated),
     )
 }
 

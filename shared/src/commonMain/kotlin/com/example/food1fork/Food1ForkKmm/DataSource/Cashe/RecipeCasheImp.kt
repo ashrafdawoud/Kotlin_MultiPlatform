@@ -18,8 +18,8 @@ class RecipeCasheImp constructor(
             rating = recipe.rating.toLong(),
             source_url = recipe.sourceUrl,
             ingredients = recipe.ingredients.convertIngredientListToString(), // TODO("Convert String to List<String>")
-            date_updated = datetimeUtil.toEpochMilliseconds(recipe.dateUpdated),
-            date_added = datetimeUtil.toEpochMilliseconds(recipe.dateAdded),
+            date_updated = 0.0,//datetimeUtil.toEpochMilliseconds(recipe.dateUpdated),
+            date_added = 0.0,//datetimeUtil.toEpochMilliseconds(recipe.dateAdded),
         )
     }
 

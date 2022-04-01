@@ -10,7 +10,7 @@ plugins {
 dependencies {
     val composeVersion = "1.0.0-beta05"
     implementation(project(":shared"))
-
+    implementation("com.google.accompanist:accompanist-coil:0.10.0")
     implementation("com.google.android.material:material:1.3.0")
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
@@ -36,6 +36,7 @@ dependencies {
         implementation("com.google.dagger:hilt-compiler:2.37")
     )
     implementation("io.ktor:ktor-client-android:1.5.2")
+    implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.0-beta02")
 
 }
 kapt {

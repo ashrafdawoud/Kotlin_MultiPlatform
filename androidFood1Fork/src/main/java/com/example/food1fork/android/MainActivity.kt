@@ -19,7 +19,6 @@ import com.example.food1fork.android.Presentation.navigation.RecipeDetailsScreen
 @ExperimentalStdlibApi
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

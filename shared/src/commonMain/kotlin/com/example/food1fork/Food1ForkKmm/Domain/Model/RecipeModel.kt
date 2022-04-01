@@ -1,6 +1,5 @@
 package com.example.food1fork.Food1ForkKmm.DataSource.Domain.Model
-import kotlinx.datetime.*
-import kotlinx.datetime.TimeZone
+//import kotlinx.datetime.*
 
 data class RecipeModel(
     val id: Int,
@@ -10,6 +9,6 @@ data class RecipeModel(
     val rating: Int,
     val sourceUrl: String,
     val ingredients: List<String> = listOf(),
-    val dateAdded: LocalDateTime,
-    val dateUpdated: LocalDateTime,
+   // val dateAdded: LocalDateTime,
+   // val dateUpdated: LocalDateTime,
 )

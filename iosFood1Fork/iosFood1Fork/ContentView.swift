@@ -1,16 +1,12 @@
 import SwiftUI
 import shared
-
 struct ContentView: View {
-	let greet = Greeting().greeting()
+    let networkModule = NetworkModule()
+    private let cacheModule = CacheModule()
 
 	var body: some View {
-		Text(greet)
+		Text("hello ashraf123")
 	}
 }
 
-struct ContentView_Previews: PreviewProvider {
-	static var previews: some View {
-		ContentView()
-	}
-}
+

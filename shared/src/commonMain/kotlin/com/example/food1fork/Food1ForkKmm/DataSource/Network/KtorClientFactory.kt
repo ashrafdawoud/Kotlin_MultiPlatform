@@ -18,8 +18,8 @@ fun RecipeDTO.toRecipe(): RecipeModel {
         publisher = publisher,
         sourceUrl = sourceUrl,
         ingredients = ingredients,
-        dateAdded = DatetimeUtil().toLocalDate(longDateAdded.toDouble()),
-        dateUpdated = DatetimeUtil().toLocalDate(longDateUpdated.toDouble()),
+        //dateAdded = DatetimeUtil().toLocalDate(longDateAdded.toDouble()),
+       // dateUpdated = DatetimeUtil().toLocalDate(longDateUpdated.toDouble()),
     )
 }
 

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
-		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
-		76D53A345A3ACCC9625BAB22 /* Pods_iosFood1Fork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F22D1A690D77D3147F00E9 /* Pods_iosFood1Fork.framework */; };
+		18ADBE35278718C200BF5E3C /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
+		18CFFF5F278259D500BC8C59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		1B759E44E689EF4E895E6853 /* Pods_iosFood1Fork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F22D1A690D77D3147F00E9 /* Pods_iosFood1Fork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D53A345A3ACCC9625BAB22 /* Pods_iosFood1Fork.framework in Frameworks */,
+				1B759E44E689EF4E895E6853 /* Pods_iosFood1Fork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,8 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				18CFFF5F278259D500BC8C59 /* ContentView.swift in Sources */,
+				18ADBE35278718C200BF5E3C /* iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,10 +305,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H84MYCSB2A;
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				INFOPLIST_FILE = iosFood1Fork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-framework",
+					"\"shared\"",
+					"-lsqlite3",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosFood1Fork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -325,10 +334,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H84MYCSB2A;
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				INFOPLIST_FILE = iosFood1Fork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-framework",
+					"\"shared\"",
+					"-lsqlite3",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosFood1Fork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
